@@ -1,6 +1,7 @@
 import express from "express";
 
 import { categoryRouter } from "./router/category";
+import { userRouter } from "./router/userRouter";
 // import { OrdersRouter } from "./router/Orders2";
 // import { ProductsRouter } from "./router/Products";
 
@@ -9,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 const port = 8080;
-
+app.use(userRouter);
 app.use("/category", categoryRouter);
 // app.use("/category", Orders2Router);
 // app.use("/category", ProductsRouter);

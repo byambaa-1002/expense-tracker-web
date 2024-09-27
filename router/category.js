@@ -12,23 +12,23 @@ categoryRouter.get("/", async (_request, response) => {
   });
 });
 
-categoryRouter.post("/", async (request, response) => {
-  const { email, categoryname, categorypassword, avatar_img } = request.body;
-  console.log(request.body);
-  try {
-    // console.log("first");
-    const newCategory =
-      await sql`INSERT INTO category ( email, categoryname, categorypassword, avatar_img)
-            VALUES (${email}, ${categoryname}, ${categorypassword}, ${avatar_img})
-            returning *`;
-    console.log("second");
+// categoryRouter.post("/", async (request, response) => {
+//   const { email, categoryname, categorypassword, avatar_img } = request.body;
+//   console.log(request.body);
+//   try {
+//     // console.log("first");
+//     const newCategory =
+//       await sql`INSERT INTO category ( email, categoryname, categorypassword, avatar_img)
+//             VALUES (${email}, ${categoryname}, ${categorypassword}, ${avatar_img})
+//             returning *`;
+//     console.log("second");
 
-    response.status(200).json({ category: newCategory });
-  } catch (error) {
-    console.log(error);
-    response.status(400).json({ message: error });
-  }
-});
+//     response.status(200).json({ category: newCategory });
+//   } catch (error) {
+//     console.log(error);
+//     response.status(400).json({ message: error });
+//   }
+// });
 // INSERT INTO your_table_name (data, categoryid) VALUES ('Some data', 1);
 categoryRouter.put("/", async (request, response) => {
   const { categoryid, email, categoryname, categorypassword, avatar_img } =

@@ -1,6 +1,6 @@
 import { sql } from "../../database";
 
-export const getgetTransaction = async (_request, response) => {
+export const getTransaction = async (_request, response) => {
   try {
     const transaction = await sql`SELECT * FROM transaction`;
     response.status(200).json({ transaction });

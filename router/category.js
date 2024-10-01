@@ -3,14 +3,16 @@ import express from "express";
 import { getCategory } from "../controller/Category/getCategory";
 import { postCategory } from "../controller/Category/postCategory";
 import { putCategory } from "../controller/Category/putCategory";
+import { deleteCategory } from "../controller/Category/deleteCategory";
 
-const { getCategory } = require("../controller/Category/getCategory");
+// const { getCategory } = require("../controller/Category/getCategory");
 
-const CategoryRouter = express.Router();
+export const CategoryRouter = express.Router();
 
-CategoryRouter.get("/", getCategory);
-CategoryRouter.post("/", postCategory);
-CategoryRouter.put("/", putCategory);
+CategoryRouter.get("/", getCategory)
+  .post("/", postCategory)
+  .put("/", putCategory)
+  .delete("/", deleteCategory);
 
 // module.exports = CategoryRouter;
 

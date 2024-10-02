@@ -1,13 +1,13 @@
-// import express from "express";
+import express from "express";
 
-// import { getCategory } from "../controller/Category/getCategory";
-// import { postCategory } from "../controller/Category/postCategory";
-// import { putCategory } from "../controller/Category/putCategory";
+import { getUser } from "../controller/User/getUser";
+import { postUser } from "../controller/User/postUser";
+import { putUser } from "../controller/User/putUser";
+import { deleteUser } from "../controller/User/deleteUser";
 
-// // const { getCategory } = require("../controller/Category/getCategory");
+export const UserRouter = express.Router();
 
-// const CategoryRouter = express.Router();
-
-// CategoryRouter.get("/", getCategory);
-// CategoryRouter.post("/", postCategory);
-// CategoryRouter.put("/", putCategory);
+UserRouter.get("/", getUser);
+UserRouter.post("/", postUser);
+UserRouter.put("/:id", putUser);
+UserRouter.delete("/", deleteUser);

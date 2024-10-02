@@ -15,11 +15,3 @@ export const putTransaction = async (request, response) => {
     response.status(400).json({ message: error });
   }
 };
-
-// "userid": "1",
-// "name": "sjkfsd",
-// "amount": "324",
-// "description": "34",
-// "username": "fgfngf",
-// "categoryid": "1"
-// }

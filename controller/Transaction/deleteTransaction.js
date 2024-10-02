@@ -12,15 +12,3 @@ export const deleteTransaction = async (request, response) => {
     response.status(400).json({ message: "bad request" });
   }
 };
-
-// CREATE TABLE transaction (
-//   trabsactionID SERIAL PRIMARY KEY,
-//   userId int references users(userId),
-//   name TEXT,
-//   amount REAL NOT NULL,
-//   description TEXT,
-//   createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-//   updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-//   userName VARCHAR (100),
-//   categoryid int references categorys(categoryid)
-//   )

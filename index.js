@@ -13,9 +13,7 @@ app.use(express.json());
 const port = 8080;
 
 app.use("/category", CategoryRouter);
-
 app.use("/transaction", TransactionRouter);
-
 app.use("/users", UserRouter);
 
 app.listen(port, () => {

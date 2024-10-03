@@ -9,7 +9,7 @@ import { deleteTransaction } from "../controller/Transaction/deleteTransaction";
 
 export const TransactionRouter = express.Router();
 
-TransactionRouter.get("/", getTransaction);
-TransactionRouter.post("/", postTransaction);
-TransactionRouter.put("/:id", putTransaction);
-TransactionRouter.delete("/", deleteTransaction);
+TransactionRouter.get("/", getTransaction)
+  .post("/", postTransaction)
+  .put("/:id", putTransaction)
+  .delete("/", deleteTransaction);

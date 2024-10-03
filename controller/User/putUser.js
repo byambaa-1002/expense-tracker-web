@@ -2,11 +2,12 @@ import { sql } from "../../database";
 
 export const putUser = async (request, response) => {
   const { id } = request.params;
-  const { email, username, password, avatar_img } = request.body;
+  const { email, userName, password, avatar_img } = request.body;
+  console.log(request.body);
   try {
     const putUser = await sql`UPDATE users
-                                SET email=${email}, username =${username} password = ${password}, avatar_img=${avatar_img}
-                                WHERE putUser = ${id}
+                                SET email=${email}, userName =${userName}, password = ${password}, avatar_img=${avatar_img}
+                                WHERE userid = ${id}
                                 RETURNING *`;
     response.status(200).json({ Users: putUser });
   } catch (error) {

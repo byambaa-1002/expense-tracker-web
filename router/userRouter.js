@@ -7,7 +7,7 @@ import { deleteUser } from "../controller/User/deleteUser";
 
 export const UserRouter = express.Router();
 
-UserRouter.get("/", getUser);
-UserRouter.post("/", postUser);
-UserRouter.put("/:id", putUser);
-UserRouter.delete("/", deleteUser);
+UserRouter.get("/", getUser)
+  .post("/", postUser)
+  .put("/", putUser)
+  .delete("/", deleteUser);

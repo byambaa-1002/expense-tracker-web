@@ -5,8 +5,8 @@ export const postUser = async (request, response) => {
 
   try {
     const postUser =
-      await sql`INSERT INTO Users (  userid, email, username, password, avatar_img)
-VALUES ( ${userid}, ${email}, ${username},${password} , ${avatar_img})
+      await sql`INSERT INTO Users (userid, email, username, password, avatar_img)
+VALUES (${userid}, ${email}, ${username},${password} , ${avatar_img})
 RETURNING *`;
 
     response.status(200).json({ record: postUser });

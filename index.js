@@ -5,12 +5,13 @@ import { CategoryRouter } from "./router/category";
 import { TransactionRouter } from "./router/transactionRouter";
 
 import { UserRouter } from "./router/userRouter";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
-
-const port = 8080;
+app.use(cors());
+const port = 8000;
 
 app.use("/category", CategoryRouter);
 app.use("/transaction", TransactionRouter);

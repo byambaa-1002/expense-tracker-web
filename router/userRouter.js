@@ -5,6 +5,7 @@ import { postUser } from "../controller/User/postUser";
 import { putUser } from "../controller/User/putUser";
 import { deleteUser } from "../controller/User/deleteUser";
 import { signin } from "../controller/User/sigin";
+import { signUp } from "../controller/User/signUp";
 
 export const UserRouter = express.Router();
 
@@ -12,4 +13,5 @@ UserRouter.get("/", getUser)
   .post("/", postUser)
   .put("/", putUser)
   .delete("/", deleteUser)
-  .post("/signin", signin);
+  .post("/signin", signin)
+  .post("/signUp", signUp);

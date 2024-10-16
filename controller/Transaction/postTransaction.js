@@ -10,7 +10,7 @@ export const postTransaction = async (request, response) => {
     username,
     categoryid,
   } = request.body;
-  console.log(request.body);
+
   try {
     const postTransaction =
       await sql`INSERT INTO transaction (  userid, name, amount, transaction_type, description, username, categoryid)

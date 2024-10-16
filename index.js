@@ -20,8 +20,5 @@ app.use("/users", UserRouter);
 app.listen(port, () => {
   console.log(`server started http://localhost:${port}`);
 });
-export async function getPgVersion() {
-  const result = await sql`select version()`;
-  console.log(result);
-}
-https://backendexpense-fr82.onrender.com
+
+// https://backendexpense-fr82.onrender.com
